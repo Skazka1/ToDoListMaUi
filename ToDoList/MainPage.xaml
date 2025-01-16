@@ -9,13 +9,13 @@
 
         <Button WidthRequest="160" Margin="10" Text="Добавить Задание" Command="{Binding AddItemCommand}" BackgroundColor="White" TextColor="Red" BorderColor="black" BorderWidth="1"/>
 
-        <ListView ItemsSource="{Binding ToDoItemViewModel}">
+        <ListView ItemsSource="{Binding ItemList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <CheckBox IsChecked="{Binding IsCompleted}" />
-                            <Label Text="{Binding Name}" VerticalOptions="Center" />
+                            <Label Text="{Binding Text}" VerticalOptions="Center" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

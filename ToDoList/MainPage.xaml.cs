@@ -31,6 +31,7 @@ namespace ToDoList
             }
             public ToDoViewModel()
             {
+                _itemList = new ObservableCollection<ToDoItemViewModel>();
                 AddItemCommand = new Command(() =>
                 {
                     if (string.IsNullOrWhiteSpace(NewText))
@@ -51,7 +52,7 @@ namespace ToDoList
                 private string _text = newText;
                 private bool _isComplete = newState;
 
-                public String Text
+                public string Text
                 {
                     get => _text;
                     set
